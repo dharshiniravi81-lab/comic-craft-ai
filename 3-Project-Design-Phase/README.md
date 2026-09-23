@@ -1,21 +1,20 @@
 # 3. Project Design Phase
 **Project:** ComicCraft - AI Comic Story Creator using Gemini Models
 
-## Architecture Overview
-The architecture of ComicCraft is structured into three primary components:
+## How we designed the app
+We split the project into 3 main parts: Frontend, Backend, and AI Models.
 
-### 1. Frontend (HTML, CSS, Jinja2)
-* Provides a simple, user-friendly web interface.
-* Captures user inputs: Story Prompt, Character Name, Setting, Story Tone, and Art Style.
-* Key Templates: `index.html` (input collection), `comic_preview.html` (display generated comic), and `export_success.html` (success message).
+### 1. Frontend (User Interface)
+* We used HTML and CSS for the design, and Jinja2 for connecting it with Python.
+* The main page takes user inputs like the story idea, character name, and art style.
+* We created separate pages to get the input, preview the comic, and show the download success message.
 
-### 2. Backend (FastAPI application)
-* Manages server-side operations and route handling.
-* Receives form data, calls AI models, organizes the comic layout, and exports to PDF.
-* Key Routes: `/generate`, `/generate-comic/json`, `/test-image`, and `/export-success`.
+### 2. Backend (FastAPI)
+* The backend is built using FastAPI.
+* It acts as a bridge between the user interface and the AI models.
+* It handles all the form data, builds the comic layout, and finally converts everything into a PDF file.
 
-### 3. AI Integration
-* **Gemini Flash:** Generates the structured 5-panel comic outline based on the story prompt.
-* **Gemini Pro:** Creates detailed narration and character dialogues.
-* **Stable Diffusion:** Generates high-quality comic-style illustrations based on image prompts.
-* 
+### 3. AI Models Used
+* **Gemini Flash:** We use this to quickly create the story outline and panel descriptions.
+* **Gemini Pro:** This generates the actual dialogues and character narration.
+* **Stable Diffusion:** This generates the comic images based on the scene descriptions.
