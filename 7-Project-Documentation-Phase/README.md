@@ -1,4 +1,4 @@
-# 7. Project Documentation Phase
+#  Project Documentation Phase
 **Project:** ComicCraft - AI Comic Story Creator using Gemini Models
 
 ## Project Overview
