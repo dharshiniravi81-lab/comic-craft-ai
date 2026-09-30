@@ -10,5 +10,5 @@ This folder is meant for our complete project documentation.
   - Indumathi.B
   - Nithisha.S
   - Swathy.D
-  - Yogalakshmi.D
+  - Yogalakshmi.J
   
